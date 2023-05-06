@@ -14,4 +14,24 @@ function getDiceRollArray(diceCount) {
 
  const getPercentage = (remainingHealth, maximumHealth) => ((remainingHealth / maximumHealth) * 100)
 
- export {getDiceRollArray, getDicePlaceholderHtml, getPercentage}
+ function myMove() {
+   var id = null;
+   var elem = document.getElementById("myAnimation");   
+   var pos = 100;
+   clearInterval(id);
+   id = setInterval(frame, 60);
+   function frame() {
+       if (pos == 68) {
+         clearInterval(id);
+   } else {
+      pos--; 
+      elem.style.top = 30 + '%'; 
+      elem.style.left = pos + '%'; 
+   }
+  }
+  document.getElementById("myAnimation").hidden = false
+}
+
+
+
+ export {getDiceRollArray, getDicePlaceholderHtml, getPercentage, myMove}
