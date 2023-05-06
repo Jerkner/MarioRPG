@@ -54,7 +54,7 @@ function endGame() {
    setTimeout(() => {
    endSound.play()
    const endMessage = monster.isDead === true && mario.isDead === true ?
-   "Oh no! You are dead!<br><br>You sacrificed your life for the sake of the Mushroom Kingdom." :
+   "Oh no! You are dead!<br><br>You sacrificed your life for<br><br>the sake of the Mushroom Kingdom." :
    monster.isDead ? "Mario wins!<br><br>Bowser was defeated!" :
    mario.isDead ? "Oh no! You are dead!" :
    ""
