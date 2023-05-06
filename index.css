@@ -18,13 +18,13 @@ html, body {
 
 @keyframes background-animation {
     0% {
-      background-image: url('images/background.jpeg');
+      background-image: url('images/background.png');
     }
     50% {
-      background-image: url('images/background2.jpg');
+      background-image: url('images/background2.png');
     }
     100% {
-      background-image: url('images/background.jpeg');
+      background-image: url('images/background.png');
     }
   }
 
