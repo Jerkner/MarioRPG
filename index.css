@@ -13,7 +13,20 @@ html, body {
     background-size: auto 100vh;
     background-position: center;
     line-break:auto;
+    animation: background-animation 1s infinite;
 }
+
+@keyframes background-animation {
+    0% {
+      background-image: url('images/background.jpeg');
+    }
+    50% {
+      background-image: url('images/background2.jpg');
+    }
+    100% {
+      background-image: url('images/background.jpeg');
+    }
+  }
 
 #playingField {
     display: flex;
