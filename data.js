@@ -2,7 +2,7 @@ const characterData = {
    hero: {
        name: "Mario",
        avatar: "images/mario1.png",
-       health: 500,
+       health: 70,
        diceCount: 3,
        currentDiceScore: []
    },
