@@ -10,10 +10,16 @@ html, body {
     color:#fff;
     font-family: 'Press Start 2P', cursive;
     background-image: url("images/background.jpeg");
-    background-size: auto 100vh;
-    background-position: center;
+    background-size: auto 100%;
+    background-position:top;
     line-break:auto;
     animation: background-animation 1s infinite;
+}
+
+@media (min-width: 550px) {
+    html, body {
+        background-repeat: repeat;
+    }
 }
 
 @keyframes background-animation {
@@ -191,7 +197,7 @@ main {
 .dice-container .dice, .dice-container .placeholder-dice{
     height:4rem;
     width:4rem;
-    line-height: 10.5vh;
+    line-height: 4;
 }
 }
 
@@ -200,7 +206,6 @@ main {
 }
 
 button {
-    width: 40vh;
     margin-left: auto;
     margin-top: .5rem;
     font-family: 'Press Start 2P', cursive;
@@ -239,14 +244,6 @@ button:focus { outline: 0 }
 }
 
 /* Animations */
-
-/* #myContainer {
-    border: red solid 3px;
-    position: fixed;
-    bottom: 80%;
-    right: 0px;
-    width: 17vw;
-} */
 
 @media (min-width: 550px) {
 #myAnimation {
