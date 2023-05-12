@@ -1,29 +1,40 @@
-<html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="index.css">
-        
-    </head>
-    <body>
-        <div id="playingField">
-            <main>
-                <div id="hero"> 
-                </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario RPG</title>
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/mario1.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+        <div class="left"></div>
+        <div class="center" id="center">
 
-                <div id="monster">      
+            <main id="main">
+                 <div id="hero">
                 </div>
-
+                 <div id="monster">
+                </div> 
             </main>
-            <section id="actions">
+
                 <button id="attack-button">Attack</button>
-            </section>
+                <button id="play-again-button" class="hidden">Play Again?</button>
+
         </div>
-                <div id ="myAnimation" hidden></div>
-        <script src="/index.js" type="module"></script>
-       
-    </body>
+
+
+        <div class="right">
+            <div id ="peach1" hidden></div>
+            <div id ="peach2" hidden></div>
+
+        </div>
+
+        <script type="module" src="/index.js"></script>
+</body>
 </html>

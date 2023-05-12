@@ -9,7 +9,7 @@ class Character {
 
       getDiceHtml() {
          this.currentDiceScore = getDiceRollArray(this.diceCount)
-         this.diceArray = this.currentDiceScore.map( num => `<div class="dice">${num}</div>`).join('')
+         this.diceArray = this.currentDiceScore.map( num => `<img class="dice" src="images/${num}.png">`).join('')
       }
 
       getDiceHtml2() {
@@ -29,7 +29,7 @@ class Character {
          const percent = getPercentage(this.health, this.maxHealth)
             return `
             <div class="health-bar-outer">
-               <div class="health-bar-inner ${percent <= 25 ? "danger3" : percent <= 50 ? "danger2" : percent <= 75 ? "danger1" : ""}"
+               <div class="health-bar-inner ${percent <= 20 ? "danger4" : percent <= 40 ? "danger3" : percent <= 60 ? "danger2" : percent <= 80 ? "danger1" : ""}"
                style="width: ${percent}%;">
                </div>
             </div>`
