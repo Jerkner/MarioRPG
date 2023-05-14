@@ -5,21 +5,27 @@
 }
 
 html, body {
-    padding: 0;
-    margin: 0;    
+/*Display stuff*/
     display: flex;
     flex-direction: column;
-    color:#fff;
+/*Box model stuff*/
+    margin: 0;    
+    padding: 0;
+/*Typography stuff*/
     font-family: 'Press Start 2P', cursive;
+    color:#fff;
+/*Miscellaneous*/
     overflow: hidden;
   }
 
 /* Backgrounds */
 
 body {
+/*Display stuff*/
     display: flex;
     flex-direction: row;
-    height: 100vh;
+/*Box model stuff*/
+    height: 100dvh;
     margin: 0;
   }
   
@@ -30,58 +36,71 @@ body {
 }
 
   .left, .right {
+/*Display stuff*/
+    flex-grow: 0;
+/*Box model stuff*/
     width: 0;
+    margin-top: 0;
+    background-clip: content-box;
     background-image: url('images/background-left1-1.png');
     background-repeat: repeat-x;
-    background-clip: content-box;
-    box-sizing: border-box;
-    flex-grow: 0;
-    margin-top: 0;
+/*Manipulations stuff*/
     animation: background-animation-sides 1s infinite;
+/*Miscellaneous*/
+    box-sizing: border-box;
   }
   
   .left {
+/*Box model stuff*/
     background-position: right center;
     background-size: 28px 100vh;
   }
   
   .right {
+/*Box model stuff*/
     background-position: left center;
     background-size: 28px 100%;
-    overflow-x: hidden
-  }
+/*Miscellaneous*/
+    overflow-x: hidden  }
   
   .center {
+/*Display stuff*/
     display: flex;
     flex-direction: column;
+/*Box model stuff*/
     width: 100%;
     background-image: url('images/background-center1-1.png');
     background-repeat: repeat-x;
     background-size: 28px 100%;
+/*Manipulations stuff*/
     animation: background-animation-center 1s infinite;
   }
 
 main {
+/*Display stuff*/
     display: flex;
     flex-direction: column;
     align-items: center;
 } 
 
 .character-card {
-    height:30vh;
-    margin-top: 2vh;
+/*Positioning stuff*/
+    position: relative;
+/*Box model stuff*/
     width: 40vw;
     max-width: 230px;
+    height:30vh;
+    margin-top: 2vh;
     padding: 1vh 1vw;
-    font-size: 1.6rem;
-    color: white;
-    border-radius: 14px;
-    position: relative;
-    background: #231d24;
-    text-align: center;
     border: 0.08rem solid #000721;
-    box-shadow: inset 0px 0px 6px 2px rgba(100,100,100,0.2),
-                0px 0px 10px rgba(117,182,214,0.2);
+    border-radius: 14px;
+    background: #231d24;
+/*Typography stuff*/
+    font-size: 1.6rem;
+    text-align: center;
+    color: white;
+/*Miscellaneous*/
+    box-shadow: inset 0px 0px 6px 2px rgba(100,100,100,0.2),                0px 0px 10px rgba(117,182,214,0.2);
 }
 
 #hero {
@@ -89,30 +108,37 @@ main {
 }
 
 .name {
-    text-align: center;
+/*Box model stuff*/
     width:100%;
-    letter-spacing: 0.08em;
+/*Typography stuff*/
     font-size: 80%;
+    text-align: center;
+/*Miscellaneous*/
+    letter-spacing: 0.08em;
 }
 
 .avatar {
+/*Box model stuff*/
     width: 12vh;
-    border: 2px solid #000721;
     max-width:100%;
-    opacity: 0.8;
+    border: 2px solid #000721;
     border-radius: 10px;
     background-color: rgba(0, 7, 33, 0.8);
+/*Manipulations stuff*/
+    opacity: 0.8;
 }
 
 .health {
+/*Box model stuff*/
+    margin: 2vh 0;
+    margin-left: 5%;
+/*Typography stuff*/
     font-size:40%;
     font-weight: normal;
     text-align: left;
-    margin: 2vh 0;
-    margin-left: 5%;
     color:#ccc;
-    letter-spacing: 0.03em
-}
+/*Miscellaneous*/
+    letter-spacing: 0.03em}
 
 .health b {
     font-weight: bold;
@@ -120,11 +146,12 @@ main {
 }
 
 .health-bar-outer {
-    background: #171217;
-    height: 1vh;
+/*Box model stuff*/
     width:90%;
+    height: 1vh;
     margin: 2vh 5%;
     border-radius: 2px;
+    background: #171217;
 }
 
 .health-bar-outer .health-bar-inner {
@@ -150,29 +177,36 @@ main {
 }
 
 .dice-container {
-    width:100%;
-    height: 20%;
+/*Display stuff*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+/*Positioning stuff*/
     position: absolute;
-    bottom:0;
     left:0px;
     right:0;
-    background: #000721;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: .5rem;
+    bottom:0;
+/*Box model stuff*/
+    width:100%;
+    height: 20%;
     border-bottom-left-radius: 14px;
     border-bottom-right-radius: 14px;
+    background: #000721;
+/*Miscellaneous*/
+    gap: .5rem;
 }
 
 .dice, .placeholder-dice{
-    height:5.5vh;
+/*Box model stuff*/
     width:5.5vh;
-    background: #fff;   
-    border-radius: 5px;
+    height:5.5vh;
     border:1px solid #666;
-    color:#000721;
+    border-radius: 5px;
+    background: #fff;   
+/*Typography stuff*/
     text-align: center;
+    color:#000721;
+/*Miscellaneous*/
     line-height: 6vh;
 }
 
@@ -181,21 +215,25 @@ main {
 }
 
 button {
-  margin: 0.5rem auto;
+/*Display stuff*/
+  display: inline-block;
+/*Box model stuff*/
   width: 40vh;
   max-width: 360px;
-  font-family: 'Press Start 2P', cursive;
-  background-color: #fcc02a;
-  border: 2px solid #963404;
+  height: 9vh;
+  margin: 0.5rem auto;
   padding-left:5vw;
   padding-right:5vw;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1.5em;
+  border: 2px solid #963404;
   border-radius: 6px;
-  cursor: pointer;
+  background-color: #fcc02a;
+/*Typography stuff*/
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5em;
+  text-decoration: none;
   color:#963404;
-  height: 9vh;
+/*Miscellaneous*/
+  cursor: pointer;
   box-shadow: 0px 6px 10px -4px rgba(0,0,0,0.4);
 }
 
@@ -205,11 +243,14 @@ button {
 }
 
 .end-game{
-    letter-spacing: 0.05em;
-    font-size: 0.8em;
-    margin-top: 10em;
+/*Box model stuff*/
     margin-bottom: auto;
+    margin-top: 10em;
+/*Typography stuff*/
+    font-size: 0.8em;
     text-align: center;
+/*Miscellaneous*/
+    letter-spacing: 0.05em;
     line-height: 1.5;
 }
 
