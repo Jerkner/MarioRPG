@@ -25,7 +25,7 @@ body {
     display: flex;
     flex-direction: row;
 /*Box model stuff*/
-    height: 100dvh;
+    height: 100svh;
     margin: 0;
   }
   
