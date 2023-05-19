@@ -53,10 +53,10 @@ function peach2() {
 function peachAnimation() {
    const mediaQuery = window.matchMedia("(min-width: 1366px)");
    if (mediaQuery.matches) {
-     // Screen width is at least 1368px
+     // Screen width is at least 1366px
    peach2()
       } else {
-     // Screen width is less than 1368px
+     // Screen width is less than 1366px
    peach1()   }
  };
 

@@ -1,30 +1,25 @@
 *, *::before, *::after {
-    box-sizing: border-box;
-    /* border: red solid 1px; */
     margin: 0;
+    box-sizing: border-box;
+        /* border: red solid 1px; */
+
 }
 
 html, body {
-/*Display stuff*/
     display: flex;
     flex-direction: column;
-/*Box model stuff*/
     margin: 0;    
     padding: 0;
-/*Typography stuff*/
     font-family: 'Press Start 2P', cursive;
     color:#fff;
-/*Miscellaneous*/
     overflow: hidden;
   }
 
 /* Backgrounds */
 
 body {
-/*Display stuff*/
     display: flex;
     flex-direction: row;
-/*Box model stuff*/
     height: 100vh;
     margin: 0;
   }
@@ -36,57 +31,44 @@ body {
 }
 
   .left, .right {
-/*Display stuff*/
     flex-grow: 0;
-/*Box model stuff*/
     width: 0;
     margin-top: 0;
     background-clip: content-box;
     background-image: url('images/background-left1-1.png');
     background-repeat: repeat-x;
-/*Manipulations stuff*/
     animation: background-animation-sides 1s infinite;
-/*Miscellaneous*/
     box-sizing: border-box;
   }
   
   .left {
-/*Box model stuff*/
     background-position: right center;
     background-size: 28px 100vh;
   }
   
   .right {
-/*Box model stuff*/
     background-position: left center;
     background-size: 28px 100%;
-/*Miscellaneous*/
     overflow-x: hidden  }
   
   .center {
-/*Display stuff*/
     display: flex;
     flex-direction: column;
-/*Box model stuff*/
     width: 100%;
     background-image: url('images/background-center1-1.png');
     background-repeat: repeat-x;
     background-size: 28px 100%;
-/*Manipulations stuff*/
     animation: background-animation-center 1s infinite;
   }
 
 main {
-/*Display stuff*/
     display: flex;
     flex-direction: column;
     align-items: center;
 } 
 
 .character-card {
-/*Positioning stuff*/
     position: relative;
-/*Box model stuff*/
     width: 40vw;
     max-width: 230px;
     height:30vh;
@@ -95,49 +77,43 @@ main {
     border: 0.08rem solid #000721;
     border-radius: 14px;
     background: #231d24;
-/*Typography stuff*/
     font-size: 1.6rem;
     text-align: center;
     color: white;
-/*Miscellaneous*/
     box-shadow: inset 0px 0px 6px 2px rgba(100,100,100,0.2),                0px 0px 10px rgba(117,182,214,0.2);
 }
 
 #hero {
-  margin-top: 10vh;
+  order: 1;
 }
 
+#monster {
+  margin-top: 10vh;
+
+}
 .name {
-/*Box model stuff*/
     width:100%;
-/*Typography stuff*/
     font-size: 80%;
     text-align: center;
-/*Miscellaneous*/
     letter-spacing: 0.08em;
 }
 
 .avatar {
-/*Box model stuff*/
     width: 12vh;
     max-width:100%;
     border: 2px solid #000721;
     border-radius: 10px;
     background-color: rgba(0, 7, 33, 0.8);
-/*Manipulations stuff*/
     opacity: 0.8;
 }
 
 .health {
-/*Box model stuff*/
     margin: 2vh 0;
     margin-left: 5%;
-/*Typography stuff*/
     font-size:40%;
     font-weight: normal;
     text-align: left;
     color:#ccc;
-/*Miscellaneous*/
     letter-spacing: 0.03em}
 
 .health b {
@@ -146,7 +122,6 @@ main {
 }
 
 .health-bar-outer {
-/*Box model stuff*/
     width:90%;
     height: 1vh;
     margin: 2vh 5%;
@@ -177,36 +152,29 @@ main {
 }
 
 .dice-container {
-/*Display stuff*/
     display: flex;
     align-items: center;
     justify-content: center;
-/*Positioning stuff*/
     position: absolute;
     left:0px;
     right:0;
     bottom:0;
-/*Box model stuff*/
     width:100%;
     height: 20%;
     border-bottom-left-radius: 14px;
     border-bottom-right-radius: 14px;
     background: #000721;
-/*Miscellaneous*/
     gap: .5rem;
 }
 
 .dice, .placeholder-dice{
-/*Box model stuff*/
     width:5.5vh;
     height:5.5vh;
     border:1px solid #666;
     border-radius: 5px;
     background: #fff;   
-/*Typography stuff*/
     text-align: center;
     color:#000721;
-/*Miscellaneous*/
     line-height: 6vh;
 }
 
@@ -215,9 +183,7 @@ main {
 }
 
 button {
-/*Display stuff*/
   display: inline-block;
-/*Box model stuff*/
   width: 40vh;
   max-width: 360px;
   height: 9vh;
@@ -227,12 +193,10 @@ button {
   border: 2px solid #963404;
   border-radius: 6px;
   background-color: #fcc02a;
-/*Typography stuff*/
   font-family: 'Press Start 2P', cursive;
   font-size: 1.5em;
   text-decoration: none;
   color:#963404;
-/*Miscellaneous*/
   cursor: pointer;
   box-shadow: 0px 6px 10px -4px rgba(0,0,0,0.4);
 }
@@ -243,13 +207,10 @@ button {
 }
 
 .end-game{
-/*Box model stuff*/
     margin-bottom: auto;
     margin-top: 10em;
-/*Typography stuff*/
     font-size: 0.8em;
     text-align: center;
-/*Miscellaneous*/
     letter-spacing: 0.05em;
     line-height: 1.5;
 }
@@ -271,14 +232,14 @@ button {
   }
   
   .health {
-    font-size: 0.67em;
+    font-size: 0.6em;
   }
 }
 
 @media (min-width: 1024px) {
   main {
     justify-content: center;
-    flex-direction: row;
+    flex-direction: row-reverse;
     gap: 5vh;
   }
 
