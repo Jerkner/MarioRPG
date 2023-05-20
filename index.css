@@ -24,11 +24,11 @@ body {
     margin: 0;
   }
   
-/* .left,
+.left,
 .right,
 .center {
     height: 100%;
-} */
+}
 
   .left, .right {
     flex-grow: 0;
