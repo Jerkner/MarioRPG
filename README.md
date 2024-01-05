@@ -11,6 +11,7 @@ This project is a Mario-themed role-playing game created using JavaScript. It wa
 - [Credits](#credits)
 - [Acknowledgments](#acknowledgments)
 - [Future Development](#future-development)
+- [Contact](#contact)
 
 ## Description
 
